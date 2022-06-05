@@ -1,0 +1,33 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+@section scripts{
+
+    <script src="~/Scripts/plugins/Mustache.js"></script>
+    <script src="~/Scripts/controllers/CategoryController.js"></script>
+}
+<table>
+    <thead>
+        <tr>
+            <td>Id</td>
+            <td>Name</td>
+            <td>Slug</td>
+            <td>Desc</td>
+            <td>CreatedDate</td>
+            <td>Status</td>
+        </tr>
+    </thead>
+    <tbody id="tblData"></tbody>
+</table>
+
+<script id="data-template" type="x-tmpl-mustache">
+    <tr>
+          <td>{{Id}}</td>
+          <td>{{Name}}</td>
+          <td>{{Slug}}</td>
+          <td>{{Desc}}</td>
+          <td>{{CreatedDate}}</td>
+          <td>{{Status}}</td>
+      </tr>
+</script>
